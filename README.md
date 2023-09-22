@@ -44,7 +44,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import invcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-invcase@deno/mod.js';
+import invcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-invcase@v0.1.0-deno/mod.js';
 ```
 
 #### invcase( str )
@@ -73,7 +73,7 @@ str = invcase( 'foo BAR' );
 ## Examples
 
 ```javascript
-import invcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-invcase@deno/mod.js';
+import invcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-invcase@v0.1.0-deno/mod.js';
 
 var str = 'Hello World!';
 var out = invcase( str );
