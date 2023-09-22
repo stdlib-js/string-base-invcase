@@ -44,6 +44,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import invcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-invcase@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/string-base-invcase/tags). For example,
+
+```javascript
 import invcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-invcase@v0.1.0-deno/mod.js';
 ```
 
@@ -73,7 +78,7 @@ str = invcase( 'foo BAR' );
 ## Examples
 
 ```javascript
-import invcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-invcase@v0.1.0-deno/mod.js';
+import invcase from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-base-invcase@deno/mod.js';
 
 var str = 'Hello World!';
 var out = invcase( str );
