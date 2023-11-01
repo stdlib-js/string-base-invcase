@@ -21,81 +21,13 @@
 // MODULES //
 
 var tape = require( 'tape' );
-var invcase = require( './../../dist' );
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof invcase, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'the function converts a camel case string to an inverse case string', function test( t ) {
-	var expected;
-	var actual;
-
-	expected = 'CAMELcASE';
-	actual = invcase( 'camelCase' );
-	t.strictEqual( actual, expected, 'returns expected value' );
-
-	expected = 'ISmOBILE';
-	actual = invcase( 'isMobile' );
-	t.strictEqual( actual, expected, 'returns expected value' );
-	t.end();
-});
-
-tape( 'the function converts a string to inverse case', function test( t ) {
-	var expected;
-	var values;
-	var i;
-
-	values = [
-		'Hello World',
-		'I am tiny little tea pot',
-		'BIG problems',
-		'THE quick BROWN fox JUMPS over THE lazy DOG',
-		'  Whitespace  '
-	];
-
-	expected = [
-		'hELLO wORLD',
-		'i AM TINY LITTLE TEA POT',
-		'big PROBLEMS',
-		'the QUICK brown FOX jumps OVER the LAZY dog',
-		'  wHITESPACE  '
-	];
-
-	for ( i = 0; i < values.length; i++ ) {
-		t.strictEqual( invcase( values[i] ), expected[i], 'returns expected value' );
-	}
-	t.end();
-});
-
-tape( 'the function converts a string with Unicode characters to inverse case', function test( t ) {
-	var expected;
-	var values;
-	var i;
-
-	values = [
-		'привет МИР',
-		'Я МаЛеНьКаЯ лОшАдКа',
-		'БОЛЬШИЕ проблемы',
-		'БЫСТРЫЙ коричневый ФОНД',
-		'Café ESUNA bEllA'
-	];
-
-	expected = [
-		'ПРИВЕТ мир',
-		'я мАлЕнЬкАя ЛоШаДкА',
-		'большие ПРОБЛЕМЫ',
-		'быстрый КОРИЧНЕВЫЙ фонд',
-		'cAFÉ esuna BeLLa'
-	];
-
-	for ( i = 0; i < values.length; i++ ) {
-		t.strictEqual( invcase( values[i] ), expected[i], 'returns expected value' );
-	}
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
